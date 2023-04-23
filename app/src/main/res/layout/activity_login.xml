@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0980FD"
+    tools:context=".Login">
+
+    <ImageView
+        android:id="@+id/LoginPage_logo"
+        android:layout_width="345dp"
+        android:layout_height="302dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/vm3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/LoginPage_email_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="323dp"
+        android:layout_height="74dp"
+        android:layout_marginBottom="308dp"
+        android:hint="Email"
+        android:textColor="#0980FD"
+        android:textColorHint="#0980FD"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/email"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/LoginPage_email"
+            android:layout_width="322dp"
+            android:layout_height="63dp"
+            android:layout_marginBottom="312dp"
+            android:background="@color/white"
+            android:padding="20dp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/LoginPage_password_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="323dp"
+        android:layout_height="74dp"
+        android:layout_marginBottom="308dp"
+        android:hint="Password"
+        android:textColor="@color/purple_700"
+        android:textColorHint="#0080B3"
+        app:endIconMode="password_toggle"
+        app:startIconDrawable="@drawable/lock1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LoginPage_email_layout"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/LoginPage_password"
+            android:layout_width="322dp"
+            android:layout_height="63dp"
+
+            android:inputType="textPassword"
+            android:layout_marginTop="32dp"
+            android:background="@color/white"
+            android:padding="20dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+    <com.google.android.material.button.MaterialButton
+
+        android:id="@+id/Login_page_login_Button"
+        android:layout_width="155dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="@color/purple_700"
+        android:text="Log In"
+        android:textColor="@color/white"
+
+
+        app:cornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LoginPage_password_layout" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="108dp"
+        android:text="TextView"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="186dp"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
