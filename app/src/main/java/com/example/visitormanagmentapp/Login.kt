@@ -35,26 +35,28 @@ class Login : AppCompatActivity() {
     }
     private fun Login(email:String,password:String){
         var a=-1
+        var ab=StringBuilder()
         val getData=object :ValueEventListener{
             override fun onCancelled(error: DatabaseError) {
             }
 
             override fun onDataChange(snapshot: DataSnapshot) {
-                var ab=StringBuilder()
                 for(i in snapshot.children){
-//                    var name=i.child("empName").getValue()
-//                    var password=i.child("empPassword").getValue()
-//                    ab.append("${i.key} ${name} ${password}")
-                    if(email.dropLast(10).equals(i.key.toString())&&password.equals(i.child("empPassword").getValue().toString())){
-                        a=1
-                        break
+                    var name=i.child("empName").getValue()
+                    var password=i.child("empPassword").getValue()
+                    ab.append("${i.key} ${name} ${password}")
+                    if (password != null) {
+                        if(email.dropLast(10).equals(i.key.toString())&&password.equals(i.child("empPassword").getValue().toString())){
+                            a=1
+                            break
+                        }
                     }
                 }
+                //text1.text=ab
             }
         }
-        if(a==1){
-            Toast.makeText(this,"HI",Toast.LENGTH_LONG).show()
-        }
+            var i = Intent(this, MainActivity::class.java)
+            startActivity(i)
         fb.addValueEventListener(getData)
         fb.addListenerForSingleValueEvent(getData)
 
